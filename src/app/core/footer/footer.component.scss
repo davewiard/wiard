@@ -1,0 +1,21 @@
+@import '../../../../node_modules/angular-bootstrap-md/scss/core/_colors.scss';
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  display: inline;
+  font-size: 1.3em;
+  padding: 1em;
+}
+
+a, a:visited {
+  color: $light-blue-lighten-1;
+}
+
+a:hover {
+  color: $light-blue-darken-2;
+}

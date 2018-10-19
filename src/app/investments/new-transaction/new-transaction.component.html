@@ -1,0 +1,103 @@
+<div class="container">
+  <!-- Default form subscription -->
+  <form class="text-center border border-light p-5">
+
+    <p class="h4 mb-4">Enter New Trade</p>
+
+    <div class="form-row">
+
+      <div class="col-md-4 mb-3">
+        <label for="validationCustom01">Symbol</label>
+        <input type="text" class="form-control" id="validationCustom01" placeholder="Symbol" required>
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+      </div>
+
+      <div class="col-md-8 mb-3">
+        <label for="validationCustom01">Symbol Name</label>
+        <input type="text" class="form-control mb-4" placeholder="Symbol Name">
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+      </div>
+
+    </div> <!-- .form-row -->
+
+    <div class="form-row">
+
+      <div class="col-md-4 mb-3">
+        <label for="validationCustom01">Trade Date</label>
+        <input type="date" class="form-control" id="validationCustom01" placeholder="Trade Date" required>
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+      </div>
+
+      <div class="col-md-8 mb-3">
+        <label for="validationCustom02">Sector</label>
+        <select class="browser-default custom-select mb-4">
+          <option value="" selected disabled>Select sector</option>
+          <option value="financial_services">Financial Services</option>
+          <option value="health_care">Health Care</option>
+        </select>
+      </div>
+
+    </div> <!-- .form-row -->
+
+    <div class="form-row">
+
+        <div class="col-md-4 mb-3">
+        <label for="validationCustom01">Shares</label>
+        <input type="number" class="form-control mb-4" placeholder="1.0000">
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-3">
+        <label for="validationCustom01">Price Per Share</label>
+        <input type="number" class="form-control mb-4" placeholder="10.00">
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-3">
+        <label for="validationCustom01">Pre-tax?</label>
+        <input type="checkbox" class="form-control mb-4" unchecked>
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+      </div>
+
+    </div> <!-- .form-row -->
+
+    <div class="form-row">
+
+      <div class="col-md-4 mb-3">
+        <label for="validationCustom02">Broker</label>
+        <select class="browser-default custom-select mb-4">
+          <option value="" disabled>Select broker</option>
+          <option value="fisespp">FIS ESPP</option>
+          <option value="robinhood" selected>Robinhood</option>
+        </select>
+      </div>
+
+      <div class="col-md-4 mb-3">
+        <label for="validationCustomUsername">Portfolio</label>
+        <select class="browser-default custom-select mb-4">
+          <option value="" disabled>Select portfolio</option>
+          <option value="fisespp">FIS ESPP</option>
+          <option value="robinhood" selected>Robinhood</option>
+        </select>
+      </div>
+
+    </div> <!-- .form-row -->
+
+    <!-- Sign in button -->
+    <button class="btn btn-block solarized-accent" type="submit">Submit</button>
+
+  </form>
+  <!-- Default form subscription -->
+</div>

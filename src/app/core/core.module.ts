@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
 import { CoreRoutingModule } from './core-routing.module';
+import { FooterComponent } from './footer/footer.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
@@ -20,9 +21,11 @@ import { AuthGuardService } from './services/auth-guard.service';
     NavbarComponent,
     NotFoundComponent,
     LoginComponent,
-    LinksComponent
+    LinksComponent,
+    FooterComponent
   ],
   exports: [
+    FooterComponent,
     NavbarComponent,
     RouterModule
   ],

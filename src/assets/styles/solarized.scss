@@ -1,0 +1,136 @@
+/**
+ * Solarized color definitions
+ * https://ethanschoonover.com/solarized/
+ */
+
+// dark background tones
+$solarized-base03:    #002b36;
+$solarized-base02:    #073642;
+
+// content tones
+$solarized-base01:    #586e75;
+$solarized-base00:    #657b83;
+$solarized-base0:     #839496;
+$solarized-base1:     #93a1a1;
+
+// light background tones
+$solarized-base2:     #eee8d5;
+$solarized-base3:     #fdf6e3;
+
+// accent colors
+$solarized-yellow:    #b58900;
+$solarized-orange:    #cb4b16;
+$solarized-red:       #dc322f;
+$solarized-magenta:   #d33682;
+$solarized-violet:    #6c71c4;
+$solarized-blue:      #268bd2;
+$solarized-cyan:      #2aa198;
+$solarized-green:     #859900;
+
+
+/**
+ * core definition for rebasing elements into current solarized theme
+ */
+@mixin rebase($rebase03, $rebase02, $rebase01, $rebase00, $rebase0, $rebase1, $rebase2, $rebase3) {
+    background-color: $rebase03;
+    * { color: $rebase0; }
+    h1, h2, h3, h4, h5, h6 {
+        color: $rebase1;
+        border-color: $rebase0;
+    }
+    a { color: $rebase2; }
+    .container { background-color: $rebase03; }
+    .card { background-color: $rebase02; }
+}
+
+
+/**
+ * any elements that need to be recolored with only an accent color
+ */
+ @mixin accentize($accent) {
+    a:active, a:hover, a:hover i { color: $accent; }
+}
+
+
+/**
+ * defines how navbar elements will be changed to rebase them into current solarized theme
+ */
+ @mixin rebase-navbar($rebase03, $rebase02, $rebase01, $rebase00, $rebase0, $rebase1, $rebase2, $rebase3, $accent) {
+    nav,
+    .dropdown-menu {
+        background-color: $rebase02;
+
+    }
+
+    .logo strong,
+    .nav-item .nav-link {
+        color: $rebase3 !important;
+    }
+
+    .logo strong:hover,
+    .nav-item .nav-link:hover {
+        color: $accent !important;
+    }
+
+    .navbar .dropdown-item {
+        color: $rebase3 !important;
+    }
+    .navbar .dropdown-item:hover {
+        background-color: $rebase02;
+        color: $accent !important;
+    }
+}
+
+
+/**
+ * define a SOLARIZED LIGHT theme
+ */
+ .solarized-light {
+  @include rebase($solarized-base3,
+                  $solarized-base2,
+                  $solarized-base1,
+                  $solarized-base0,
+                  $solarized-base00,
+                  $solarized-base01,
+                  $solarized-base02,
+                  $solarized-base03);
+    
+    @include accentize($solarized-blue);
+    
+    @include rebase-navbar($solarized-base3,
+                           $solarized-base2,
+                           $solarized-base1,
+                           $solarized-base0,
+                           $solarized-base00,
+                           $solarized-base01,
+                           $solarized-base02,
+                           $solarized-base03,
+                           $solarized-blue);
+}
+
+
+/**
+ * define a SOLARIZED DARK theme
+ */
+.solarized-dark  {
+  @include rebase($solarized-base03,
+                  $solarized-base02,
+                  $solarized-base01,
+                  $solarized-base00,
+                  $solarized-base0,
+                  $solarized-base1,
+                  $solarized-base2,
+                  $solarized-base3);
+    
+    @include accentize($solarized-blue);
+
+    @include rebase-navbar($solarized-base03,
+                           $solarized-base02,
+                           $solarized-base01,
+                           $solarized-base00,
+                           $solarized-base0,
+                           $solarized-base1,
+                           $solarized-base2,
+                           $solarized-base3,
+                           $solarized-blue);
+}

@@ -1,4 +1,12 @@
-@import '../../../../node_modules/angular-bootstrap-md/scss/core/_colors.scss';
+@import '../../../assets/styles/solarized.scss';
+
+
+/**
+ * footer-specific styles
+ */
+.container {
+  margin-top: 24px;
+}
 
 ul {
   list-style-type: none;
@@ -10,12 +18,4 @@ li {
   display: inline;
   font-size: 1.3em;
   padding: 1em;
-}
-
-a, a:visited {
-  color: $light-blue-lighten-1;
-}
-
-a:hover {
-  color: $light-blue-darken-2;
 }

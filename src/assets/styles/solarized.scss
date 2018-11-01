@@ -94,9 +94,9 @@ $solarized-green:     #859900;
                   $solarized-base01,
                   $solarized-base02,
                   $solarized-base03);
-    
+
     @include accentize($solarized-blue);
-    
+
     @include rebase-navbar($solarized-base3,
                            $solarized-base2,
                            $solarized-base1,
@@ -121,7 +121,7 @@ $solarized-green:     #859900;
                   $solarized-base1,
                   $solarized-base2,
                   $solarized-base3);
-    
+
     @include accentize($solarized-blue);
 
     @include rebase-navbar($solarized-base03,

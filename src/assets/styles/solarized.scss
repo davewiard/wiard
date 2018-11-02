@@ -33,14 +33,32 @@ $solarized-green:     #859900;
  */
 @mixin rebase($rebase03, $rebase02, $rebase01, $rebase00, $rebase0, $rebase1, $rebase2, $rebase3) {
     background-color: $rebase03;
-    * { color: $rebase0; }
+
+    * {
+      color: $rebase0;
+    }
+
     h1, h2, h3, h4, h5, h6 {
         color: $rebase1;
         border-color: $rebase0;
     }
-    a { color: $rebase2; }
-    .container { background-color: $rebase03; }
-    .card { background-color: $rebase02; }
+
+    a {
+      color: $rebase2;
+    }
+
+    .container {
+      background-color: $rebase03;
+    }
+
+    .card {
+      background-color: $rebase02;
+    }
+
+    button {
+      background-color: $rebase2;
+      color: $rebase02;
+    }
 }
 
 
@@ -48,7 +66,10 @@ $solarized-green:     #859900;
  * any elements that need to be recolored with only an accent color
  */
  @mixin accentize($accent) {
-    a:active, a:hover, a:hover i { color: $accent; }
+//    button,
+    a:active, a:hover, a:hover i {
+      color: $accent;
+    }
 }
 
 
